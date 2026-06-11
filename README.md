@@ -2,7 +2,7 @@
 שרת API באמצעות FastAPI שמתחבר למסד נתונים MySQL ומנהל מערכת של ספרים וחברי ספרייה.
 
 # הקוד ליצירת docker עם MySql
-docker run --name my-mysql \ -e MYSQL_ROOT_PASSWORD=secret \ -e MYSQL_DATABASE=mydb \ -p 3306:3306 \ -v mysql_data:/var/lib/mysql \ -d mysql:latest
+docker run --name mysql-library -e MYSQL_ROOT_PASSWORD=1234 -e MYSQL_DATABASE=library_db -p 3306:3306 -v library_data:/var/lib/mysql -d mysql:latest
 
 # מבנה התיקיות
 library-api/
